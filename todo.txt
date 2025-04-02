@@ -1,0 +1,22 @@
+Logika przemieszczania się samochodów
+
+Tryby:
+- bezpieczny, gdy zła pogoda
+- standard, na podstawie ilości pojazdów
+- eko w nocy
+- awaryjny i wszystko miga na żółto
+- priorytet dla KMK
+
+Drukowanie pożądanego outputu
+
+Na Arduino świecić diodami
+
+GUI i deploy na railway
+
+Zrobić cały bonus pack i fajnie opakować 
+
+Wydajność systemu
+
+Organizacja, czytelność i zrozumiałość kodu
+
+Pokrycie testami
