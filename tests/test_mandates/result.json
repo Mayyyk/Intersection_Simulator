@@ -15,21 +15,6 @@
          "vehicle1",
          "vehicle3"
       ]
-    },
-    {
-      "leftVehicles": [
-         "vehicle4"
-      ]
-    },
-    {
-      "leftVehicles": [
-
-      ]
-    },
-    {
-      "leftVehicles": [
-
-      ]
-    },
+    }
   ]
 }

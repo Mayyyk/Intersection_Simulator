@@ -1,0 +1,16 @@
+{
+  "commands": [
+    {
+      "type": "addVehicle",
+      "vehicleId": "v1",
+      "startRoad": "stachiewicza",
+      "endRoad": "radzikowskiego"
+    },
+    {
+      "type": "step"
+    },
+    {
+      "type": "step"
+    }
+  ]
+}

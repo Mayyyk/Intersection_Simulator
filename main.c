@@ -85,7 +85,7 @@ int is_allowed(float from_lane, float to_lane, Road roads[]) {
     for (int i = 0; i < MAX_LANES; i++) {
         if (roads[from_road].inbound[i].lane_id == from_lane) { // Zabezpieczenie
             for (int j = 0; j < MAX_CONNECTIONS; j++) {
-                if ((int)roads[from_road].inbound[i].connections[j] == to_lane)
+                if (roads[from_road].inbound[i].connections[j] == to_lane)
                     return 1; // dozwolone
             }
         }
@@ -189,7 +189,7 @@ void initialize_roads(Road roads[]) {
 int main() {
     Road roads[4]; // Tablica dróg
     initialize_roads(roads);
-    int currentPhase = 0;
+    int currentPhase = 1; // pierwsza faza to 0
 
     FILE *file = fopen("input.txt", "r");
     FILE *output_file = fopen("output.json", "w");
@@ -208,13 +208,12 @@ int main() {
 
         if (sscanf(line, "ADD %s {%f, %f}", vehicle_id, &from_lane, &to_lane) == 3) {
             int is_vehicle_allowed = is_allowed(from_lane, to_lane, roads);
-            printf("Pojazd %s: %s\n", vehicle_id,
-                    is_vehicle_allowed ? "PRZEJAZD DOZWOLONY" : "Mandat 10 pkt. karnych!");
-                    add_vehicle(vehicle_id, from_lane, to_lane, roads);
+            printf("Pojazd %s: %s\n", vehicle_id, is_vehicle_allowed ? "PRZEJAZD DOZWOLONY" : "Mandat 10 pkt. karnych!");
+            if(is_vehicle_allowed) add_vehicle(vehicle_id, from_lane, to_lane, roads);
         } else if (strncmp(line, "STEP", 4) == 0) {
             currentPhase = (currentPhase+1)%2;
+            update_lights(currentPhase, roads); // nowa faza -> ruch 
             move_cars(roads, output_file);
-            update_lights(currentPhase, roads);
             print_lane_status(roads);
             printf("Wykonano krok symulacji (STEP)\n");
         }

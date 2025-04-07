@@ -1,0 +1,7 @@
+{
+  "commands": [
+    { "type": "addVehicle", "vehicleId": "v1", "startRoad": "stachiewicza", "endRoad": "wroclawska" },
+    { "type": "addVehicle", "vehicleId": "v2", "startRoad": "wroclawska", "endRoad": "stachiewicza" },
+    { "type": "step" }
+  ]
+}
