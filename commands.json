@@ -29,6 +29,9 @@
         "vehicleId": "vehicle4",
         "startRoad": "wybickiego",
         "endRoad": "radzikowskiego"
+      },
+      {
+        "type": "step"
       }
     ]
   }
