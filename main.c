@@ -213,9 +213,12 @@ int main() {
         } else if (strncmp(line, "STEP", 4) == 0) {
             currentPhase = (currentPhase+1)%2;
             update_lights(currentPhase, roads); // nowa faza -> ruch 
-            move_cars(roads, output_file);
+            printf("Status po zmianie świateł. \n");
             print_lane_status(roads);
-            printf("Wykonano krok symulacji (STEP)\n");
+            move_cars(roads, output_file);
+            printf("Status po przejeździe samochodów. \n");
+            print_lane_status(roads);
+            printf("Wykonano PEŁNY krok symulacji (STEP)\n");
         }
 
     }

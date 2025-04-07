@@ -1,0 +1,38 @@
+{
+    "commands": [
+      {
+        "type": "addVehicle",
+        "vehicleId": "vehicle1",
+        "startRoad": "stachiewicza",
+        "endRoad": "wroclawska"
+      },
+      {
+        "type": "step"
+      },
+      {
+        "type": "addVehicle",
+        "vehicleId": "vehicle2",
+        "startRoad": "radzikowskiego",
+        "endRoad": "stachiewicza"
+      },
+      {
+        "type": "addVehicle",
+        "vehicleId": "vehicle3",
+        "startRoad": "wroclawska",
+        "endRoad": "wybickiego"
+      },
+      {
+        "type": "step"
+      },
+      {
+        "type": "addVehicle",
+        "vehicleId": "vehicle4",
+        "startRoad": "wybickiego",
+        "endRoad": "radzikowskiego"
+      },
+      {
+        "type": "step"
+      }
+    ]
+  }
+  
